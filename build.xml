@@ -17,7 +17,8 @@
         <delete dir="${build}"/>
     </target>
     <target name="package" depends="compile">
-        <jar destfile="${releases}/${ant.project.name}.jar" basedir="${classes}">
+        <buildnumber/>
+        <jar destfile="${releases}/${ant.project.name}-${version}.${build.number}.jar" basedir="${classes}">
             <manifest>
                 <attribute name="Main–Class" value="${ant.project.name}"/>
             </manifest>
